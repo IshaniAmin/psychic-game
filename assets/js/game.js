@@ -23,14 +23,14 @@
         var key = event.key;
 
         var compLetter = options[Math.floor(Math.random()*options.length)];
-        console.log(compLetter);
+        console.log(compLetter); //to check which letter the computer randomly picked
 
         if (key == compLetter) {
         	win++;
         	guessesLeft = 10
       		guess = [];
         	result();
-        } else if (key !== compLetter) {
+        } else if (options.indexOf(key) > -1) {
         	guessesLeft--;
         	guess.push(key);
         	result();
